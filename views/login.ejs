@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated Login Form</title>
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @media (max-width: 768px) {
+
+            .input-group{
+                border-bottom: 1px solid black;
+            }
+            body{
+            background-image: url('a.jpg');
+            background-size: cover; /* Make the background image cover the entire viewport */
+           
+            }
+            .wave,.bg {
+                display: none; 
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <img class="wave" src="wave.png">
+    <div class="container">
+        <div class="row" style="margin-top: 100px;">
+            <div class="col-lg-6 d-flex justify-content-end align-items-center">
+                <img class="bg" src="bg.svg" style="max-width: 530px;">
+            </div>
+                    <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                        <form action="/login" method="POST">
+                            <img src="avatar.svg" class="mb-4 custom-avatar">
+                            <h1 class="mb-4 text-center">Welcome</h1>
+                            <div class="mb-5 custom-input">
+                                <div class="input-group">
+                                    <span class="input-group-text  border-1 border-bottom"><i class="fas fa-user"></i></span>
+                                    <input   class="form-control border-1 border-bottom"  type="email" name="email" placeholder="Email"   value="<%=locals.email%>" />
+                                </div>
+                            </div>
+                            <div class="mb-5 custom-input">
+                                <div class="input-group">
+                                    <span class="input-group-text  border-1 border-bottom"><i class="fas fa-lock"></i></span>
+                                    <input class="form-control  border-1 border-bottom" type="password" name="password" placeholder="password">
+
+                                </div>
+                            </div>
+                            <a href="#" class="d-block text-end mb-3">Forgot Password?</a>
+                            <p class="error"><%= locals.message %></p>
+                            <div class="d-grid">
+                            <button type="submit" class="btn btn-success btn-lg ">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.wave {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+}
+ .custom-avatar {
+  max-width: 100px;
+  width: auto;
+  margin-left: 120px;
+}
+
+.custom-input {
+  width: 350px;
+}
